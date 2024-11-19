@@ -74,7 +74,7 @@ Material:
     - _FillAmount: 0.51
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _ScaleAndRotationMultiplayier: 1.75
+    - _ScaleAndRotationMultiplayier: 2.6
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color01: {r: 0, g: 0.32156855, b: 0.6431373, a: 1}

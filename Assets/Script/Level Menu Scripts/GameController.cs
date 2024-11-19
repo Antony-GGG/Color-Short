@@ -1,14 +1,10 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-using UnityEngine.SceneManagement;
-using System.Threading;
 
 
 public class GameController : MonoBehaviour
 {
-
     public BottleController FirstBottle;
     public BottleController SecondBottle;
     public BottleController[] bottles;
@@ -28,7 +24,6 @@ public class GameController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
 
@@ -92,7 +87,7 @@ public class GameController : MonoBehaviour
             }
             else // tab anywhere on the screen to deslecet bottles
             {
-                if (FirstBottle.numberOfColorsInBottle != 0)
+                if (FirstBottle.numberOfColorsInBottle != 0 && FirstBottle != null)
                 {
                     FirstBottle.transform.position = new Vector3(FirstBottle.transform.position.x,
                                                                  FirstBottle.transform.position.y + bottleDown,
@@ -111,7 +106,6 @@ public class GameController : MonoBehaviour
 
     IEnumerator AllBottlesAreFull() // check to completing the level
     {
-
         if (bottles.All(y => y.numberOfColorsInBottle == 0 || y.numberOfTopColorLayer == 4))
         {
             allFull = true;
@@ -120,15 +114,12 @@ public class GameController : MonoBehaviour
 
             Win();
         }
-
     }
 
     private void Win()
     {
-
         if (allFull == true)
         {
-
             numberOfUnlockedLevel = PlayerPrefs.GetInt("LevelIsUnlocked");
 
             if (numberOfUnlockedLevel <= levelToUnlock)
@@ -136,15 +127,10 @@ public class GameController : MonoBehaviour
                 PlayerPrefs.SetInt("LevelIsUnlocked", numberOfUnlockedLevel + 1);
             }
 
-            if (LevelCompleted.activeSelf == false)
+            if (!LevelCompleted.activeInHierarchy)
             {
                 LevelCompleted.SetActive(true);
             }
-
         }
-
-
     }
-
-
 }
