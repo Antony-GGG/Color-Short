@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-
 public class PauseGame : MonoBehaviour
 {
 
@@ -31,7 +30,6 @@ public class PauseGame : MonoBehaviour
                 pauseMenu.SetActive(true);
             }
         }
-
     }
 
     public void Resume()

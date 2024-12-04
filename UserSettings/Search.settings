@@ -62,6 +62,8 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
+	""
+	"h: ref=\"Assets/Sprites/Buttons/Old Icons/Bubble Icon.png\""
 ]
 searchItemFavorites = [
 ]

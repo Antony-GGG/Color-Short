@@ -7,16 +7,14 @@ public class LevelScene : MonoBehaviour
 {
     public int sceneIndex;
 
-    public void OpenScene()
+    public void OpenScene(int _levelIndex)
     {
-        SceneManager.LoadScene(sceneIndex);
+        SceneManager.LoadScene(_levelIndex + 1);
     }
 
     public void BackToMenu()
     {
         SceneManager.LoadScene(1);
     }
-
-
 
 }

@@ -6,31 +6,33 @@ public class LevelCompleted : MonoBehaviour
 {
 
     public Button nextLevel;
-    public Button playAgain;
+    //public Button playAgain;
     public Button home;
 
     private int sceneIndex;
 
-    public AudioSource winngSound;
+    //public AudioSource winngSound;
 
     private void Start()
     {
-        PlaySound();
-
+        //PlaySound();
         sceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
 
     public void NextLevel()
     {
-        if (sceneIndex == 16)
+
+        SceneManager.LoadScene(1);
+
+        /*if (sceneIndex == 16)
         {
             SceneManager.LoadScene(0);
         }
         else
         {
             SceneManager.LoadScene(sceneIndex + 1);
-        }
+        }*/
     }
 
     public void PlayAgain()
@@ -43,9 +45,9 @@ public class LevelCompleted : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public void PlaySound()
+    /*public void PlaySound()
     {
         winngSound.Play();
-    }
+    }*/
 
 }

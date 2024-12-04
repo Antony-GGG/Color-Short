@@ -1,14 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 
 public class StartMenu : MonoBehaviour
 {
 
-    [SerializeField] GameObject settingsWindow;
+    //[SerializeField] GameObject settingsWindow;
 
 
     public void PlayButton()
@@ -18,12 +15,12 @@ public class StartMenu : MonoBehaviour
 
     public void ShowSettings()
     {
-        settingsWindow.SetActive(true);
+        //settingsWindow.SetActive(true);
     }
 
     public void ExitPanel()
     {
-        settingsWindow.SetActive(false);
+        //settingsWindow.SetActive(false);
     }
 
 }
